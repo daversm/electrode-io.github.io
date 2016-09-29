@@ -6,6 +6,7 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/electrode.css">
   <link rel="stylesheet" href="css/electrode-icons.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
   <link rel="shortcut icon" href="img/favicon-64.png">
 
   <!-- Start GA analytics code -->
@@ -145,123 +146,126 @@
 
   <div class="mobile-pillar-bar"></div>
 
-  <div id="mobile-pillar-content-zone">
 
-    <div id="mobile-core-content">
-      <div class="mobile-content-heading">
-        <p id="mobile-header-info"> Electrode is a platform for building universal React/Node.js applications with standardized structure, best practices, and modern technologies baked in. </p>
-      </div>
-      <div id="snippet-bubble">
-        <div class="row">
-          <h4>QUICK AND EASY SETUP!</h4>
+  <div id="myCarouselmobileTwo" class="carousel slide" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner" role="listbox">
+
+      <div id="mobile-core-content" class="item" data-slide-to="0" data-target="#myCarouselmobileTwo">
+        <div class="mobile-content-heading">
+          <p id="mobile-header-info"> Electrode is a platform for building universal React/Node.js applications with standardized structure, best practices, and modern technologies baked in. </p>
         </div>
-        <div class="row" id="code-snippet">
-          <div>
-            <p>$ sudo npm install -g yo gulp generator-electrode</p>
-            <p>$ mkdir my-electrode-app</p>
-            <p>$ cd my-electrode-app</p>
-            <p>$ yo electrode</p>
-            <p>$ gulp dev</p>
+        <div id="snippet-bubble">
+          <div class="row">
+            <h4>QUICK AND EASY SETUP!</h4>
+          </div>
+          <div class="row" id="code-snippet">
+            <div>
+              <p>$ sudo npm install -g yo gulp generator-electrode</p>
+              <p>$ mkdir my-electrode-app</p>
+              <p>$ cd my-electrode-app</p>
+              <p>$ yo electrode</p>
+              <p>$ gulp dev</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="snippet-bubble-text col-md-10 col-md-offset-1">That's it! Next, deploy, your app to your favorite cloud service.</div>
+          </div>
+          <div class="row">
+            <button class="btn col-md-offset-1 col-md-3" id="details-btn">DETAILS</button>
+            <button class="btn col-md-offset-1 col-md-6" id="deploy-btn">DEPLOY</button>
           </div>
         </div>
-        <div class="row">
-          <div class="snippet-bubble-text col-md-10 col-md-offset-1">That's it! Next, deploy, your app to your favorite cloud service.</div>
-        </div>
-        <div class="row">
-          <button class="btn col-md-offset-1 col-md-3" id="details-btn">DETAILS</button>
-          <button class="btn col-md-offset-1 col-md-6" id="deploy-btn">DEPLOY</button>
-        </div>
+        <p> Electrode emphasizes convention over configuration, while focusing on performance, component reusability, and simple deployment </p>
+        <p> Get new projects started quickly with a simple, consistent structure that follows modern best practices. Electrode Core allows you to build a flexible scaffold in minutes, with support for server-side rendering and easy deployment to multiple cloud providers. </p>
+        <p> The heart of the platform is Electrode Archetypes, which allow for standardized configurations and structure of the app and its associated react components. By enforcing a sensible structure and consistency for components, modules and the entire app, Electrode’s Archetype system helps you build scalable applications you can trust while ensuring streamlined </p>
       </div>
-      <p> Electrode emphasizes convention over configuration, while focusing on performance, component reusability, and simple deployment </p>
-      <p> Get new projects started quickly with a simple, consistent structure that follows modern best practices. Electrode Core allows you to build a flexible scaffold in minutes, with support for server-side rendering and easy deployment to multiple cloud providers. </p>
-      <p> The heart of the platform is Electrode Archetypes, which allow for standardized configurations and structure of the app and its associated react components. By enforcing a sensible structure and consistency for components, modules and the entire app, Electrode’s Archetype system helps you build scalable applications you can trust while ensuring streamlined </p>
-    </div>
 
-    <div id="mobile-modules-content">
-      <table>
 
-        <tr class="mobile-module-item">
-          <td class="mobile-module-item-text">
-              <b>SSR Profiling & Caching</b>
-              <br>This module can help you improve your React server-side rendering performance by up to 70% by caching your components' render</br>
-          </td>
-          <td>
-            <a href="/docs/server_side_render_cache.html">
-              <img src="/img/icn-ssr.svg" alt="">
-            </a>
-          </td>
-        </tr>
+      <div id="mobile-modules-content" class="item active" data-slide-to="1" data-target="#myCarouselmobileTwo">
+        <table>
 
-        <tr class="mobile-module-item">
-          <td class="mobile-module-item-text">
-            <b>Above-the-Fold Rendering</b>
-            <br>Instead of side rendering the whole page on the server, this react component enables rendering of *only* the components your users see on the screen without scrolling, for improved performance.</br>
-          </td>
-          <td>
-            <a href="/docs/above_fold_rendering.html">
-              <img src="/img/icn-atf.svg" alt="">
-            </a>
-          </td>
-        </tr>
+          <tr class="mobile-module-item">
+            <td class="mobile-module-item-text">
+                <b>SSR Profiling & Caching</b>
+                <br>This module can help you improve your React server-side rendering performance by up to 70% by caching your components' render</br>
+            </td>
+            <td>
+              <a href="/docs/server_side_render_cache.html">
+                <img src="/img/icn-ssr.svg" alt="">
+              </a>
+            </td>
+          </tr>
 
-        <tr class="mobile-module-item">
-          <td class="mobile-module-item-text">
-            <b>Redux Router Engine</b>
-            <br>Do you need data from a service to render your component server-side? This module fetches the data asynchronously and passes it to React to render your components. Requires Redux.</br>
-          </td>
-          <td>
-            <a href="/docs/redux_router_engine.html">
-              <img src="/img/icn-redux.svg" alt="">
-            </a>
-          </td>
-        </tr>
+          <tr class="mobile-module-item">
+            <td class="mobile-module-item-text">
+              <b>Above-the-Fold Rendering</b>
+              <br>Instead of side rendering the whole page on the server, this react component enables rendering of *only* the components your users see on the screen without scrolling, for improved performance.</br>
+            </td>
+            <td>
+              <a href="/docs/above_fold_rendering.html">
+                <img src="/img/icn-atf.svg" alt="">
+              </a>
+            </td>
+          </tr>
 
-        <tr class="mobile-module-item">
-          <td class="mobile-module-item-text">
-            <b>Confippet</b>
-            <br>Lets you define, extend, and merge configurations for different environments (such as QA, prod, and staging) that get initialized during start up or at runtime.</br>
-          </td>
-          <td>
-            <a href="/docs/confippet.html">
-              <img src="/img/icn-confippet.svg" alt="">
-            </a>
-          </td>
-        </tr>
+          <tr class="mobile-module-item">
+            <td class="mobile-module-item-text">
+              <b>Redux Router Engine</b>
+              <br>Do you need data from a service to render your component server-side? This module fetches the data asynchronously and passes it to React to render your components. Requires Redux.</br>
+            </td>
+            <td>
+              <a href="/docs/redux_router_engine.html">
+                <img src="/img/icn-redux.svg" alt="">
+              </a>
+            </td>
+          </tr>
 
-        <tr class="mobile-module-item">
-          <td class="mobile-module-item-text">
-            <b>Stateless CSRF Validation</b>
-            <br>Validate HTTP requests without a session--for Express and Hapi.</br>
-          </td>
-          <td>
-            <a href="/docs/stateless_csrf_validation.html">
-              <img src="/img/icn-csrf.svg" alt="">
-            </a>
-          </td>
-        </tr>
+          <tr class="mobile-module-item">
+            <td class="mobile-module-item-text">
+              <b>Confippet</b>
+              <br>Lets you define, extend, and merge configurations for different environments (such as QA, prod, and staging) that get initialized during start up or at runtime.</br>
+            </td>
+            <td>
+              <a href="/docs/confippet.html">
+                <img src="/img/icn-confippet.svg" alt="">
+              </a>
+            </td>
+          </tr>
 
-        <tr class="mobile-module-item">
-          <td class="mobile-module-item-text">
-            <b>More Modules Coming Soon!</b>
-            <br>New module release announcements will be Tweeted on <a href="https://twitter.com/electrode_io">@electrode_io</a></br>
-          </td>
-          <td>
-            <a href="/docs/stand_alone_modules.html">
-              <img src="/img/icn-more.svg" alt="">
-            </a>
-          </td>
-        </tr>
+          <tr class="mobile-module-item">
+            <td class="mobile-module-item-text">
+              <b>Stateless CSRF Validation</b>
+              <br>Validate HTTP requests without a session--for Express and Hapi.</br>
+            </td>
+            <td>
+              <a href="/docs/stateless_csrf_validation.html">
+                <img src="/img/icn-csrf.svg" alt="">
+              </a>
+            </td>
+          </tr>
 
-      </table>
-    </div>
+          <tr class="mobile-module-item">
+            <td class="mobile-module-item-text">
+              <b>More Modules Coming Soon!</b>
+              <br>New module release announcements will be Tweeted on <a href="https://twitter.com/electrode_io">@electrode_io</a></br>
+            </td>
+            <td>
+              <a href="/docs/stand_alone_modules.html">
+                <img src="/img/icn-more.svg" alt="">
+              </a>
+            </td>
+          </tr>
 
-    <div id="mobile-tools-content">
+        </table>
+      </div>
+
+      <div id="mobile-tools-content" data-target="" class="item" data-slide-to="2" data-target="#myCarouselmobileTwo">
         <b>
           Discover reusable components and optimize your JS bundle with standalone tools. These tools can be used with any React/Node app, but work best with the structure provided by Electrode Core.
         </b>
         <div id="tools-carousel" class="carousel slide row" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
-            <div class="item active">
+            <div class="item active" data-target="#tools-carousel">
               <div class="tool-title">
                 <a href="https://github.com/electrode-io">
                   <img class="github-logo" src="/img/github-mobile.svg"/>
@@ -280,7 +284,7 @@
                 <li>and more</li>
               </ul>
             </div>
-            <div class="item">
+            <div class="item" data-target="#tools-carousel" >
               <div class="tool-title">
                 <a href="https://github.com/electrode-io">
                   <img class="github-logo" src="/img/github-mobile.svg"/>
@@ -306,6 +310,8 @@
           </a>
         </div>
       </div>
+
+    </div>
   </div>
 
   <div class="mobile-footer-toggle">
@@ -651,8 +657,6 @@
   </div>
 
   <!-- end footer -->
-  <script src="./scripts/mobile-pillars.js"></script>
-
   <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var stickAtHeight = 2130;
@@ -687,6 +691,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script src="./scripts/mobile-pillars.js"></script>
+
 
 </body>
 </html>
